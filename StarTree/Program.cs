@@ -5,9 +5,8 @@
             Console.WriteLine();
             reverseTree();
             Console.WriteLine();
-            piramid();
+            checkOddEven();
             Console.WriteLine();
-            reversePiramid();
 
             void tree() {
                 for (int i = 0; i < 5; i++) {
@@ -24,6 +23,17 @@
                         Console.Write("*");
                     }
                     Console.WriteLine();
+                }
+            }
+
+            void checkOddEven() {
+                for (int i = 1; i <= 10; i++) {
+                    if (i % 2 == 0) {
+                        Console.WriteLine(i + " is even");
+                    }
+                    else {
+                        Console.WriteLine(i + " is odd");
+                    }
                 }
             }
         }
