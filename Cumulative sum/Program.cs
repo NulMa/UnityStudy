@@ -4,15 +4,25 @@
             Console.Write("Input Your Value : ");
             string userInput = Console.ReadLine();
 
-            int input = 10;
+            int input = int.Parse(userInput);
             int half = input / 2;
             int answer = 0;
 
-            for(int i = 0; i < half; i++) {
-                answer += (1 + input);
+            if(input % 2 == 0) {
+                for (int i = 0; i < half; i++) {
+                    answer += (1 + input);
+                }
             }
 
-            Console.WriteLine("Cumulative Sum is : " + answer);
+            else {
+                half = (input - 1) / 2; 
+                for(int i = 0; i < half; i++) {
+                    answer += (1 + input);
+                }
+                answer += (half + 1);
+            }
+
+             Console.WriteLine("Cumulative Sum is : " + answer);
         }
     }
 }
