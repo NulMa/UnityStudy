@@ -6,6 +6,24 @@
             Mage,
             Rogue
         }
+        
+        enum MonsterType {
+            None,
+            Slime,
+            Orc,
+            Skeleton
+        }
+
+        struct Player {
+            public ClassType classType;
+            public int hp;
+            public int atk;
+        }
+        struct Monster {
+            public string name;
+            public int hp;
+            public int atk;
+        }
 
         static ClassType ClassChoice() {
             Console.WriteLine("직업을 선택하세요!");
@@ -38,10 +56,12 @@
                     hp = 100;
                     atk = 10;
                     break;
+
                 case ClassType.Mage:
                     hp = 50;
                     atk = 15;
                     break;
+
                 case ClassType.Rogue:
                     hp = 75;
                     atk = 12;
@@ -52,6 +72,38 @@
                     atk = 1;
                     break;
             }
+        }
+
+        static void CreateRandomMonster(out Monster monster) {
+            Random rand = new Random();
+            MonsterType monsterType = (MonsterType)rand.Next(1, 4);
+
+            switch (monsterType) {
+                case MonsterType.Slime:
+                    monster.name = "Slime";
+                    monster.hp = 20;
+                    monster.atk = 2;
+                    break;
+
+                case MonsterType.Orc:
+                    monster.name = "Orc";
+                    monster.hp = 40;
+                    monster.atk = 4;
+                    break;
+
+                case MonsterType.Skeleton:
+                    monster.name = "Skeleton";
+                    monster.hp = 30;
+                    monster.atk = 3;
+                    break;
+
+                default:
+                    monster.name = "Unknown";
+                    monster.hp = 10;
+                    monster.atk = 1;
+                    break;
+            }
+            Console.WriteLine($"\n\n{monsterType} is Spawned\nHp : {monster.hp}\nAtk : {monster.atk}");
         }
 
         static void Main(string[] args) {
@@ -65,9 +117,14 @@
                     int atk;
                     CreatePlayer(choice, out hp, out atk);
 
+                    Console.Clear();
+                    
+                    Console.WriteLine($"당신의 직업 : {choice}");
                     Console.WriteLine($"HP {hp}, ATK {atk}");
+
+                    CreateRandomMonster(out Monster monster);
                 }
             }
-        }
+        } 
     }
 }
