@@ -1,4 +1,6 @@
-﻿namespace Mudgame {
+﻿using System.Threading;
+
+namespace Mudgame {
     class Program {
         enum ClassType {
             None,
@@ -23,8 +25,29 @@
             public string name;
             public int hp;
             public int atk;
+            public int Difficult;
         }
+        static void Main(string[] args) {
+            ClassType choice = ClassType.None;
 
+            while (true) {
+                choice = ClassChoice();
+                if (choice != ClassType.None) {
+                    // 캐릭터 생성
+                    int hp;
+                    int atk;
+                    CreatePlayer(choice, out hp, out atk);
+
+                    Console.Clear();
+
+                    Console.WriteLine($"당신의 직업 : {choice}");
+                    Console.WriteLine($"HP {hp}, ATK {atk}");
+
+                    Console.Clear();
+                    CreateRandomMonster(out Monster monster);
+                }
+            }
+        }
         static ClassType ClassChoice() {
             Console.WriteLine("직업을 선택하세요!");
             Console.WriteLine("[1] 기사");
@@ -74,10 +97,34 @@
             }
         }
 
+        static int SetMonsterDiff() {
+            Random rand = new Random();
+            int difficult = rand.Next(1, 101);
+            switch (rand.Next(1, 101)) {
+                case int n when (n >= 0 && n <= 60):
+                    difficult = 1;
+                    break;
+
+                case int n when (n >= 61 && n <= 85):
+                    difficult = 2;
+                    break;
+
+                case int n when (n >= 86 && n <= 90):
+                    difficult = 3;
+                    break;
+
+                default:
+                    difficult = 0;
+                    break;
+            }
+            return difficult;
+        }
         static void CreateRandomMonster(out Monster monster) {
             Random rand = new Random();
-            MonsterType monsterType = (MonsterType)rand.Next(1, 4);
+            int diff = SetMonsterDiff();
+            monster.Difficult = diff;
 
+            MonsterType monsterType = (MonsterType)rand.Next(1, 4);
             switch (monsterType) {
                 case MonsterType.Slime:
                     monster.name = "Slime";
@@ -103,28 +150,16 @@
                     monster.atk = 1;
                     break;
             }
-            Console.WriteLine($"\n\n{monsterType} is Spawned\nHp : {monster.hp}\nAtk : {monster.atk}");
-        }
 
-        static void Main(string[] args) {
-            ClassType choice = ClassType.None;
+            monster.hp *= diff;
+            monster.atk *= diff;
 
-            while (true) {
-                choice = ClassChoice();
-                if (choice != ClassType.None) {
-                    // 캐릭터 생성
-                    int hp;
-                    int atk;
-                    CreatePlayer(choice, out hp, out atk);
-
-                    Console.Clear();
-                    
-                    Console.WriteLine($"당신의 직업 : {choice}");
-                    Console.WriteLine($"HP {hp}, ATK {atk}");
-
-                    CreateRandomMonster(out Monster monster);
-                }
+            if(diff == 0) {
+                Console.WriteLine("Nothing is here.");
+                return;
             }
-        } 
+
+            Console.WriteLine($"Grade : {diff}\n{monsterType} is Spawned\nHp : {monster.hp}\nAtk : {monster.atk}");
+        }
     }
 }
