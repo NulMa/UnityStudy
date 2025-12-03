@@ -3,7 +3,7 @@
         protected string AnimalName;
         public Animal(string name) {
             AnimalName = name;
-            System.Console.WriteLine($"안녕하세요, 저는 {AnimalName}입니다");
+            Console.WriteLine($"안녕하세요, 저는 {AnimalName}입니다");
         }
         public abstract void MakeSound();
 
