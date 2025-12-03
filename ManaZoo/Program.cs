@@ -5,9 +5,7 @@
             AnimalName = name;
             System.Console.WriteLine($"안녕하세요, 저는 {AnimalName}입니다");
         }
-        public virtual void MakeSound() {
-            Console.WriteLine();
-        }
+        public abstract void MakeSound();
 
     }
 
@@ -15,21 +13,21 @@
         public Dog(string name) : base(name) { }
         public override void MakeSound() {
             Console.WriteLine("멍멍!");
-            base.MakeSound();
+            Console.WriteLine();
         }
     }
     class Cat : Animal {
         public Cat(string name) : base(name) { }
         public override void MakeSound() {
             Console.WriteLine("애옹");
-            base.MakeSound();
+            Console.WriteLine();
         }
     }
     class Cow : Animal {
         public Cow(string name) : base(name) { }
         public override void MakeSound() {
             Console.WriteLine("가챠 1트럭에 10만원이면 싸다고 생각해요");
-            base.MakeSound();
+            Console.WriteLine();
         }
     }
 
