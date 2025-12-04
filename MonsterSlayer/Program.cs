@@ -117,8 +117,8 @@ namespace MonsterSlayer
             while (gameRunning)
             {
                 Monster monster = new Monster("");
-
-                Console.WriteLine($"『   You Found {monster.Name}!\n     HP: {monster.Hp}, ATK: {monster.Atk}\n\n");
+                Console.WriteLine("┌───────────────────────────────────────────────────────┐");
+                Console.WriteLine($"    You Found {monster.Name}!\n     HP: {monster.Hp}, ATK: {monster.Atk}\n\n");
                 Thread.Sleep(300);
 
                 while (!monster.IsDead())
@@ -148,7 +148,7 @@ namespace MonsterSlayer
 
 
                         Console.ResetColor();
-                        Console.WriteLine("                                                 』\n\n");
+                        Console.WriteLine("└───────────────────────────────────────────────────────┘\n\n");
                         Console.ResetColor();
                         gameRunning = AskToContinue();
                         Console.WriteLine("\n\n");
@@ -163,7 +163,7 @@ namespace MonsterSlayer
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("    YOU DIED.");
                         Console.ResetColor();
-                        Console.WriteLine("                                             』");
+                        Console.WriteLine("└───────────────────────────────────────────────────────┘");
                         return;
                     }
                 }
