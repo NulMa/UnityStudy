@@ -45,17 +45,24 @@ namespace MonsterSlayer
             target.Hp -= damage;
 
             Thread.Sleep(100);
-
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write($"    You Attack {target.Name} with {damage}DMG");
+            Console.ResetColor();
             if (damage > 20)
             {
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("\n     <<Critical Hit!>>");
+                Console.WriteLine(" << Critical Hit!");
                 Console.ResetColor();
             }
-            Console.WriteLine($"You Attack {target.Name} with {damage}DMG\n");
+
+            else {
+                Console.WriteLine();
+            }
+
 
         }
     }
+
 
     class Monster : Character
     {
@@ -66,19 +73,19 @@ namespace MonsterSlayer
             Hp = rand.Next(20, 51);
             Atk = rand.Next(2, 7);
         }
-        static string RandomName()
-        {
+
+        static string RandomName() {
             string[] names = { "Slime", "Goblin", "Wolf", "Bat" };
             return names[new Random().Next(names.Length)];
         }
+
         public override void Attack(Character target)
         {
             Random rand = new Random();
-            target.Hp -= rand.Next(Atk - 5, Atk + 2);
+            target.Hp -= rand.Next(Atk, Atk + 2);
             Thread.Sleep(100);
-            Console.WriteLine($"{Name}'s Attack, {Atk}DMG");
+            Console.WriteLine($"    {Name}'s Attack, {Atk}DMG");
         }
-
     }
 
 
@@ -101,14 +108,17 @@ namespace MonsterSlayer
 
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
             Random rand = new Random();
             Player player = new Player("Player", 100, 10);
             bool gameRunning = true;
+            int maxHp = player.Hp;
 
             while (gameRunning)
             {
                 Monster monster = new Monster("");
-                Console.WriteLine($"\n\nYou Found {monster.Name}!\n (HP: {monster.Hp}, ATK: {monster.Atk})");
+
+                Console.WriteLine($"『   You Found {monster.Name}!\n     HP: {monster.Hp}, ATK: {monster.Atk}\n\n");
                 Thread.Sleep(300);
 
                 while (!monster.IsDead())
@@ -117,11 +127,31 @@ namespace MonsterSlayer
 
                     if (monster.IsDead())
                     {
-                        Console.WriteLine($"You Slay {monster.Name}.");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine($"    You Slay {monster.Name}.");
                         player.GainExp(10);
-                        Console.WriteLine($"gain 10 EXP! Current EXP: {player.Exp}");
-                        Console.WriteLine($"Your HP is {player.Hp}\n\n");
+                        Console.WriteLine($"    gain 10 EXP! Current EXP: {player.Exp}");
+                        Console.WriteLine($"    Your HP is {player.Hp} / {maxHp}");
+
+                        //hp bar
+                        Console.Write("    HP: [");
+                        int hpBars = (int)((double)player.Hp / maxHp * 20);
+                        for (int i = 0; i < hpBars; i++) {
+                            Thread.Sleep(1);
+                            Console.Write("■");
+                        }
+                        for (int i = hpBars; i < 20; i++) {
+                            Thread.Sleep(1 + i*10);
+                            Console.Write("□");
+                        }
+                        Console.WriteLine();
+
+
+                        Console.ResetColor();
+                        Console.WriteLine("                                                 』\n\n");
+                        Console.ResetColor();
                         gameRunning = AskToContinue();
+                        Console.WriteLine("\n\n");
                         Thread.Sleep(1000);
                         break;
                     }
@@ -130,7 +160,10 @@ namespace MonsterSlayer
 
                     if (player.IsDead())
                     {
-                        Console.WriteLine("YOU DIED.");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("    YOU DIED.");
+                        Console.ResetColor();
+                        Console.WriteLine("                                             』");
                         return;
                     }
                 }
