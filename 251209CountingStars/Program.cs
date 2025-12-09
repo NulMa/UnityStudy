@@ -3,7 +3,7 @@
     {
         static void Main(string[] args) {
             int[] count = new int[26];
-
+            string answer = "";
             string str = Console.ReadLine();
             Console.WriteLine(str);
 
@@ -14,8 +14,10 @@
                 }
             }
             foreach (int i in count) {
-                Console.Write(i + " ");
+                answer += i + " ";
             }
+            answer = answer.TrimEnd();
+            Console.WriteLine(answer);   
         }
     }
 }
