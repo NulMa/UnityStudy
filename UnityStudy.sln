@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterSlayer", "MonsterSla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "251209CountingStars", "251209CountingStars\251209CountingStars.csproj", "{7FE8E063-F32E-4A8F-B22F-47C7F8BC1B94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruckParkings", "TruckParkings\TruckParkings.csproj", "{844DB15E-2168-46DC-947F-379B32393E11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{7FE8E063-F32E-4A8F-B22F-47C7F8BC1B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FE8E063-F32E-4A8F-B22F-47C7F8BC1B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FE8E063-F32E-4A8F-B22F-47C7F8BC1B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844DB15E-2168-46DC-947F-379B32393E11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844DB15E-2168-46DC-947F-379B32393E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844DB15E-2168-46DC-947F-379B32393E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844DB15E-2168-46DC-947F-379B32393E11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

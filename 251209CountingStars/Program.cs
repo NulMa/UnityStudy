@@ -5,7 +5,6 @@
             int[] count = new int[26];
             string answer = "";
             string str = Console.ReadLine();
-            Console.WriteLine(str);
 
             foreach (char c in str) {
                 for(int i = 0; i < 27; i++) {
