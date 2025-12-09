@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManaZoo", "ManaZoo\ManaZoo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterSlayer", "MonsterSlayer\MonsterSlayer.csproj", "{F7931487-B9B4-45C2-87D8-6D83D735B47D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "251209CountingStars", "251209CountingStars\251209CountingStars.csproj", "{7FE8E063-F32E-4A8F-B22F-47C7F8BC1B94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{F7931487-B9B4-45C2-87D8-6D83D735B47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7931487-B9B4-45C2-87D8-6D83D735B47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7931487-B9B4-45C2-87D8-6D83D735B47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE8E063-F32E-4A8F-B22F-47C7F8BC1B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE8E063-F32E-4A8F-B22F-47C7F8BC1B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE8E063-F32E-4A8F-B22F-47C7F8BC1B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE8E063-F32E-4A8F-B22F-47C7F8BC1B94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
