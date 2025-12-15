@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursiveChatBot", "Recursi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci", "Fibonacci\Fibonacci.csproj", "{7F38C7D7-CFD8-4B81-A4E2-0CB66B53F356}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeachPrac", "ForeachPrac\ForeachPrac.csproj", "{4547ECF0-004D-4E6D-8559-279ACDF4668D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListPrac", "ListPrac\ListPrac.csproj", "{FF5F0797-CF25-45DB-A617-F624DB3F40AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,14 @@ Global
 		{7F38C7D7-CFD8-4B81-A4E2-0CB66B53F356}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F38C7D7-CFD8-4B81-A4E2-0CB66B53F356}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F38C7D7-CFD8-4B81-A4E2-0CB66B53F356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4547ECF0-004D-4E6D-8559-279ACDF4668D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4547ECF0-004D-4E6D-8559-279ACDF4668D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4547ECF0-004D-4E6D-8559-279ACDF4668D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4547ECF0-004D-4E6D-8559-279ACDF4668D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5F0797-CF25-45DB-A617-F624DB3F40AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5F0797-CF25-45DB-A617-F624DB3F40AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5F0797-CF25-45DB-A617-F624DB3F40AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5F0797-CF25-45DB-A617-F624DB3F40AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
