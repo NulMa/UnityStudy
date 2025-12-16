@@ -69,47 +69,5 @@ namespace CableCut
 
             Console.WriteLine(result);
         }
-
-        /*
-        static void CableCut()
-        {
-            int[] originCountAndRequire = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-            int originCount = originCountAndRequire[0];
-            int require = originCountAndRequire[1];
-            int[] cables = new int[originCount];
-
-            for (int i = 0; i < originCount; i++)
-            {
-                cables[i] = int.Parse(Console.ReadLine());
-            }
-
-            // 이분 탐색 (Binary Search) 로직으로 변경하여 오차를 없앱니다.
-            long low = 1;
-            long high = cables.Max();
-            long questionsAnswer = 0;
-
-            while (low <= high)
-            {
-                long mid = (low + high) / 2;
-                long count = 0;
-
-                foreach (int cable in cables)
-                {
-                    count += cable / mid;
-                }
-
-                if (count >= require)
-                {
-                    questionsAnswer = mid;
-                    low = mid + 1;
-                }
-                else
-                {
-                    high = mid - 1;
-                }
-            }
-            Console.WriteLine(questionsAnswer);
-        }
-        */
     }
 }
