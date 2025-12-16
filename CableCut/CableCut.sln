@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CableCut", "CableCut.csproj", "{69189219-56F9-365C-3066-6DE980F6420E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69189219-56F9-365C-3066-6DE980F6420E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69189219-56F9-365C-3066-6DE980F6420E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69189219-56F9-365C-3066-6DE980F6420E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69189219-56F9-365C-3066-6DE980F6420E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA4BC0DB-C668-4031-9B06-58276597B193}
+	EndGlobalSection
+EndGlobal
