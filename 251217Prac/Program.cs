@@ -4,42 +4,63 @@
     {
         static void Main(string[] args)
         {
-            MyList list = new MyList();
-            list.Add(1);
-            list.Add(2);
-            list.Add(3);
-            list.Add(4);
-            list.Add(5);
-            list.Add(6);
-            list.Add(7);
-            list.Add(8);
-            list.RemoveAt(0);
+            IntCounts(10);
+            CharCounts('j');
+
+            static void IntCounts(int count)
+            {
+                MyList<int> intlist = new MyList<int>();
+                for (int i = 0; i < count; i++)
+                {
+                    intlist.Add(i);
+                }
+
+                for (int i = 0; i < count; i++)
+                {
+                    intlist.RemoveLast();
+                }
+            }
+
+            static void CharCounts(char a)
+            {
+                MyList<char> charlist = new MyList<char>();
+                for (char c = 'a'; c <= a; c++)
+                {
+                    charlist.Add(c);
+                }
+                for (char c = 'a'; c <= a; c++)
+                {
+                    charlist.RemoveLast();
+                }
+            }
+
 
         }
     }
 
-    class MyList
+    class Test<T>
+    {
+        public T? unknown;
+    }
+
+
+
+    class MyList<T>
     {
         private int capacity { get { return array.Length; } }
         private int count;
-        private int[] array;
+        private T[] array;
 
         public MyList()
         {
-            array = new int[4];
-        }
-    
-        public int this[int index]
-        {
-            get { return array[index]; }
-            set { array[index] = value; }
+            array = new T[4];
         }
 
-        public void Add(int item)
+        public void Add(T item)
         {
             if (count == capacity)
             {
-                int[] newArray = new int[capacity * 2];
+                T[] newArray = new T[capacity * 2];
                 for (int i = 0; i < count; i++)
                 {
                     newArray[i] = array[i];
@@ -60,14 +81,21 @@
                 array[i] = array[i + 1];
             }
             count--;
-            array[count] = 0;
+            PrintList();
+        }
 
+        public void RemoveLast()
+        {
+            if (count > 0)
+            {
+                count--;
+            }
             PrintList();
         }
 
         private void PrintList()
         {
-            Console.Write("Current List : ");
+            Console.Write("CL : ");
             for (int i = 0; i < count; i++)
             {
                 Console.Write(array[i] + " ");
