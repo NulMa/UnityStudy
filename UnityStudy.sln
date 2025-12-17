@@ -51,6 +51,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaekJoon1920", "BaekJoon192
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CableCut", "CableCut\CableCut.csproj", "{EFA564AA-4EC3-4CB9-941B-3297E7DE6DF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackPrac", "StackPrac\StackPrac.csproj", "{024D1DF8-DFF9-4293-A1A2-5B45593A9002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "251217Prac", "251217Prac\251217Prac.csproj", "{FBB58A35-3232-4F00-B2C8-9C5A33EED09F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +157,14 @@ Global
 		{EFA564AA-4EC3-4CB9-941B-3297E7DE6DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFA564AA-4EC3-4CB9-941B-3297E7DE6DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFA564AA-4EC3-4CB9-941B-3297E7DE6DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024D1DF8-DFF9-4293-A1A2-5B45593A9002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024D1DF8-DFF9-4293-A1A2-5B45593A9002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024D1DF8-DFF9-4293-A1A2-5B45593A9002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024D1DF8-DFF9-4293-A1A2-5B45593A9002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBB58A35-3232-4F00-B2C8-9C5A33EED09F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB58A35-3232-4F00-B2C8-9C5A33EED09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBB58A35-3232-4F00-B2C8-9C5A33EED09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBB58A35-3232-4F00-B2C8-9C5A33EED09F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
