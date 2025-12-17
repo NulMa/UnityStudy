@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackPrac", "StackPrac\Stac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "251217Prac", "251217Prac\251217Prac.csproj", "{FBB58A35-3232-4F00-B2C8-9C5A33EED09F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryGeneric", "InventoryGeneric\InventoryGeneric.csproj", "{81ECD307-AE2C-495F-BB81-88030FCA09BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{FBB58A35-3232-4F00-B2C8-9C5A33EED09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB58A35-3232-4F00-B2C8-9C5A33EED09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB58A35-3232-4F00-B2C8-9C5A33EED09F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81ECD307-AE2C-495F-BB81-88030FCA09BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81ECD307-AE2C-495F-BB81-88030FCA09BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81ECD307-AE2C-495F-BB81-88030FCA09BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81ECD307-AE2C-495F-BB81-88030FCA09BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
