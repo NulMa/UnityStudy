@@ -30,6 +30,12 @@
                 }
             }
         }
+
+        public void Heal(int amount)
+        {
+            Hp += amount;
+            Console.WriteLine($"[{Name}] HP:{Hp}");
+        }
     }
     internal class Program
     {
@@ -42,7 +48,8 @@
         {
             Enemy slime = new Enemy("Slime", 20, 100, OnEnemyDie);
             slime.TakeDamage(5, "Knight"); 
-            slime.TakeDamage(20, "Knight");
+            slime.Heal(10);
+            slime.TakeDamage(30, "Knight");
         }
     }
 }
